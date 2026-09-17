@@ -15,10 +15,10 @@ public class MyFirstProjectPart1prog1A {
     public static void main(String[] args) {
             Scanner input = new Scanner(System.in);
             
-        System.out.println("Enter first name"); //Asks for users name
+        System.out.println("Enter first name"); //Asks for user's name
         String firstName = input.nextLine();
         
-         System.out.println("Enter last name");
+         System.out.println("Enter last name"); //Asks for users's lastname/surname
         String lastName = input.nextLine();
         
         System.out.print("Enter username: ");
