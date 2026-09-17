@@ -15,7 +15,7 @@ public class MyFirstProjectPart1prog1A {
     public static void main(String[] args) {
             Scanner input = new Scanner(System.in);
             
-        System.out.println("Enter first name");
+        System.out.println("Enter first name"); //Asks for users name
         String firstName = input.nextLine();
         
          System.out.println("Enter last name");
