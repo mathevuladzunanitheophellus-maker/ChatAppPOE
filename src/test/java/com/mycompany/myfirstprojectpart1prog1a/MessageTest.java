@@ -4,11 +4,7 @@
  */
 package com.mycompany.myfirstprojectpart1prog1a;
 
-import java.util.Scanner;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,20 +14,41 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class MessageTest {
     
+      // Test 1: Message ID must contain 10 digits
     @Test
-    void testMessageIDLength() {
+    void testMessageID() {
         Message message = new Message(
-                0, "+27718693002", "Hello there"
+                0,
+                "+27718693002",
+                "Hi Mike, can you join us for dinner tonight?"
         );
 
         assertEquals(10, message.getMessageID().length());
         assertTrue(message.checkMessageID());
     }
 
+    // Test 2: Message must not exceed 250 characters
     @Test
-    void testRecipientCellNumber() {
+    void testMessageLengthSuccess() {
         Message message = new Message(
-                0, "+27718693002", "Hello there"
+                0,
+                "+27718693002",
+                "Hi Mike, can you join us for dinner tonight?"
+        );
+
+        assertEquals(
+                "Message ready to send.",
+                message.checkMessageLength()
+        );
+    }
+
+    // Test 3: Recipient number must be correctly formatted
+    @Test
+    void testRecipientNumberSuccess() {
+        Message message = new Message(
+                0,
+                "+27718693002",
+                "Hi Mike, can you join us for dinner tonight?"
         );
 
         assertEquals(
@@ -40,45 +57,62 @@ public class MessageTest {
         );
     }
 
-    @Test
-    void testMessageLengthUnder250Characters() {
-        Message message = new Message(
-                0, "+27718693002", "Hello, how are you?"
-        );
-
-        
-    }
-
+    // Test 4: Message hash must match the assignment
     @Test
     void testMessageHash() {
         Message message = new Message(
-                0, "+27718693002",
+                0,
+                "+27718693002",
                 "Hi Mike, can you join us for dinner tonight?"
         );
 
-        assertNotNull(message.createMessageHash());
-        assertFalse(message.createMessageHash().isEmpty());
-    }
-
-    @Test
-    void testMessageCanBeCreated() {
-        Message message = new Message(
-                0, "+27718693002", "Hello there"
+        assertEquals(
+                "10:0:HITONIGHT",
+                message.createMessageHash()
         );
-
-        assertEquals("Hello there", message.getMessageText());
-        assertEquals("+27718693002", message.getRecipient());
     }
+    //Test 5
+    @Test
+void testSendMessage() {
+    Message message = new Message(
+            0,
+            "+27718693002",
+            "Hi Mike, can you join us for dinner tonight?"
+    );
 
+    java.util.Scanner input = new java.util.Scanner("1\n");
+
+    String result = message.SentMessage(input);
+
+    assertEquals("Message successfully sent.", result);
+}
+//Test 6
+@Test
+void testDisregardMessage() {
+    Message message = new Message(
+            1,
+            "08575975889",
+            "Hi Keegan, did you receive the payment?"
+    );
+
+    java.util.Scanner input = new java.util.Scanner("2\n");
+
+    String result = message.SentMessage(input);
+
+    assertEquals("Press 0 to delete the message.", result);
+}
+
+
+    
+    // Test 7: Storing a message should save it successfully
     @Test
     void testStoreMessage() {
         Message message = new Message(
-                0, "+27718693002", "This is a stored test message"
+                0,
+                "+27718693002",
+                "Hi Mike, can you join us for dinner tonight?"
         );
 
         assertTrue(message.storeMessage());
     }
-
-
-    }
-
+}
