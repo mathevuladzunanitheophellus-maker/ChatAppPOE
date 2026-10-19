@@ -12,6 +12,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Message {
+
+    static int getTotalMessagesSent() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+   
 private final String messageID;
 private final int messageNumber;
 private final String recipient;
