@@ -113,7 +113,6 @@ public void testPasswordCorrectMessage() {
 
 @Test
 public void testCellPhoneCorrectMessage() {
-    Login login = new Login("kyl_1", "Ch&&sec@ke99!", "+27838968976");
 
     assertEquals(
         "Cell number successfully captured.",
