@@ -1,0 +1,40 @@
+{
+ "messageID": "1000000000",
+ "messageHash": "10:0:THISMESSAGE",
+ "messageNumber": 0,
+ "recipient": "+27718693002",
+ "message": "This is a stored test message",
+ "status": "Stored"
+},
+{
+ "messageID": "1000000000",
+ "messageHash": "10:0:HITONIGHT",
+ "messageNumber": 0,
+ "recipient": "+27718693002",
+ "message": "Hi Mike, can you join us for dinner tonight?",
+ "status": "Stored"
+},
+{
+ "messageID": "1000000000",
+ "messageHash": "10:0:HITONIGHT",
+ "messageNumber": 0,
+ "recipient": "+27718693002",
+ "message": "Hi Mike, can you join us for dinner tonight?",
+ "status": "Stored"
+},
+{
+ "messageID": "1000000000",
+ "messageHash": "10:0:HITONIGHT",
+ "messageNumber": 0,
+ "recipient": "+27718693002",
+ "message": "Hi Mike, can you join us for dinner tonight?",
+ "status": "Stored"
+},
+{
+ "messageID": "1000000000",
+ "messageHash": "10:0:HITONIGHT",
+ "messageNumber": 0,
+ "recipient": "+27718693002",
+ "message": "Hi Mike, can you join us for dinner tonight?",
+ "status": "Stored"
+},
