@@ -78,26 +78,22 @@ System.out.println("3. Store Message");
 System.out.print("Enter your choice: ");
 String choice = input.nextLine();
 switch (choice) {
-case "1" -> {
-    status = "Sent";
-    sentMessages.add(this);
-    totalMessagesSent++;
-    return "Message successfully sent.";
-        }
-case "2" -> {
-    status = "Disregarded";
-    return "Press 0 to delete the message.";
-        }
-case "3" -> {
-    status = "Stored";
-    if (storeMessage()) {
-        return "Message successfully stored.";
-    }
-    return "Message could not be stored.";
-        }
-default -> {
-    return "Invalid option. Message not sent.";
-        }
+case "1":
+status = "Sent";
+sentMessages.add(this);
+totalMessagesSent++;
+return "Message successfully sent.";
+case "2":
+status = "Disregarded";
+return "Press 0 to delete the message.";
+case "3":
+status = "Stored";
+if (storeMessage()) {
+return "Message successfully stored.";
+}
+return "Message could not be stored.";
+default:
+return "Invalid option. Message not sent.";
 }
 }
 public String printMessages() {
