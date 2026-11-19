@@ -7,7 +7,7 @@ public class MyFirstProjectPart1prog1A {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter first name");//The code allows the user to enter their names first
         String firstName = input.nextLine();
-        System.out.println("Enter last name"); 
+        System.out.println("Enter last name"); //The user must also enter their surname before they enter theur usernames and password
         String lastName = input.nextLine();
         System.out.print("Enter username: ");
         String username = input.nextLine();
