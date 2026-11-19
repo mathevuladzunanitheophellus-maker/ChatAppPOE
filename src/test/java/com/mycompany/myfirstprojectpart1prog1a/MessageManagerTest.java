@@ -31,7 +31,7 @@ class MessageManagerTest {
         manager.addMessage(m4);
         manager.addMessage(m5);
     }
-
+     //tests for the whole messagemanager
     @Test
     void sentMessagesArrayIsPopulatedCorrectly() {
         assertEquals("Did you get the cake?" + System.lineSeparator() + "It is dinner time!", manager.getSentMessagesText());
