@@ -7,7 +7,7 @@ import java.nio.file.Path;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/** Manages the five arrays required for Part 3. */
+//I added this class to meet the part requirements
 public class MessageManager {
     private final Message[] sentMessages;
     private final Message[] disregardedMessages;
