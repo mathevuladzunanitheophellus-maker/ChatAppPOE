@@ -14,6 +14,7 @@ import org.junit.jupiter.api.Test;
 
 public class MyFirstProjectPart1prog1ATest {
 
+    //Each test is divided for better understsanding
     @Test
     public void testUsernameCorrect() {
         Login login = new Login("kyl_1", "Ch&&sec@ke99!", "+27838968976");
