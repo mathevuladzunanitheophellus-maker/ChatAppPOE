@@ -1,5 +1,5 @@
 package com.mycompany.myfirstprojectpart1prog1a;
-
+//Removed array lists
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
